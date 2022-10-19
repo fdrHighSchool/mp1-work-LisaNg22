@@ -20,9 +20,9 @@ public class RNG {
 
 // Code for easy mode
    
- if (userMode == "easy"){
+ if (userMode.equals("easy")){
    Random random = new Random();
-   int easyNumber = random.nextInt(1,10);// Easy random number
+   int easyNumber = random.nextInt(10);// Easy random number
    System.out.println("I am thinking of a number between 1 and 10 (including both). Can you guess what it is? Type your guess!");
    Scanner easyInput = new Scanner (System.in);
    int easyGuess = easyInput.nextInt();
@@ -48,7 +48,7 @@ public class RNG {
  
  else if (userMode == "medium"){
    Random random = new Random();
-   int mediumNumber = random.nextInt(1,50);// Medium random number
+   int mediumNumber = random.nextInt(50);// Medium random number
    System.out.println("I am thinking of a number between 1 and 50 (including both). Can you guess what it is? Type your guess!");
    Scanner mediumInput = new Scanner (System.in);
    int mediumGuess = mediumInput.nextInt();
@@ -74,7 +74,7 @@ public class RNG {
 
  else {
    Random random = new Random();
-   int hardNumber = random.nextInt(1,100);// Hard random number
+   int hardNumber = random.nextInt(100);// Hard random number
      
    System.out.println("I am thinking of a number between 1 and 100 (including both). Can you guess what it is? Type your guess!");
 
@@ -98,5 +98,4 @@ public class RNG {
      }
   }
 }
- }
 }
