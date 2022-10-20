@@ -29,7 +29,7 @@ else{
 System.out.println("Hello " + initialize(firstName) + lastName + favoriteNumber + "@schools.nyc.gov");
 }//end else statement
 
-generatePassword(0);
+generatePassword(5);
 
 s.close();
   } // end main method
@@ -53,19 +53,25 @@ s.close();
     String password = "";
     
     for(int i = 0 ; i< length; i++) {
-        //generate a random number
-    
+        //generate a random numbers and convert them into char
         //65-90 capital letters
-        int rand = (char)(int)(Math.random()*(90-65+1)+ 65);
+        int capitial = (char)(int)(Math.random()*(90-65+1)+ 65);
+        char c = (char)(capitial);
+        System.out.println(capitial + " " + c);
+        password += c;
         //97-122 lower case
+        int lower = (char)(int)(Math.random()*(122-97+1)+ 97);
+        char l = (char)(lower);
+        System.out.println(lower + " " + l);
+        password += l;
         //33-47 special symbols
-        //convert ASCII to char
-        char c = (char)rand;
-        System.out.println(rand + " " + c);
+        int special = (char)(int)(Math.random()*(47-33+1)+ 33);
+        char s = (char)(special);
+        System.out.println(special + " " + s);
+        password += s;
     }
-    
-    //add the char to the password String
     //generate password
+    System.out.println("Your password is " + password);
     return password;
   } // end generatePassword
 

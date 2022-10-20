@@ -46,7 +46,7 @@ public class RNG {
    
 // Code for medium mode
  
- else if (userMode == "medium"){
+ else if (userMode.equals("medium")){
    Random random = new Random();
    int mediumNumber = random.nextInt(50);// Medium random number
    System.out.println("I am thinking of a number between 1 and 50 (including both). Can you guess what it is? Type your guess!");
