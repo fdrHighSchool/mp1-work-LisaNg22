@@ -26,10 +26,11 @@ if (role.equals("student")){
     System.out.println("Hello " + firstName + initialize(lastName) + favoriteNumber + "@nycstudents.net");
 }//end if statement
 else{
-System.out.println("Hello " + initialize(firstName) + lastName + favoriteNumber + "@schools.nyc.gov");
+    System.out.println("Hello " + initialize(firstName) + lastName + favoriteNumber + "@schools.nyc.gov");
 }//end else statement
-
-generatePassword(5);
+System.out.print("How long do you want your password? ");
+int length = s.nextInt();
+generatePassword(length);
 
 s.close();
   } // end main method
@@ -70,6 +71,7 @@ s.close();
         System.out.println(special + " " + s);
         password += s;
     }
+    
     //generate password
     System.out.println("Your password is " + password);
     return password;
